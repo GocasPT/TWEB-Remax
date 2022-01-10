@@ -1,6 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap'); */ /* Importar fonte */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&display=swap'); /* Importar a fonte 'Nunito Sans' com os tamanhos 300, 400, 700 e 900 */
 
+body{
+    margin: 0; /*Para tirar as bordas laterais EM TODO O SITE*/
+}
+
 html {
     border-top: 3px solid #df1828;
     font-family: 'Nunito Sans', sans-serif;
@@ -228,13 +232,16 @@ html {
 .circle{
     height: 32px;
     width: 32px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border: .7px solid #54595e;
     border-radius: 50%;
     font-size: .8125rem;
     color: #4c555f;
+    
     background-color: transparent;
     margin-right: .8rem;
     cursor: pointer;
@@ -470,19 +477,8 @@ html {
     align-items: center;
 }
 
-/*Diferentes tamanhos dos quadradros*/
-@media (min-width:576px){
-    .scroll-item{flex:0 0 50%;max-width:50%;}
-}
-@media (min-width:992px){
-    .scroll-item{flex:0 0 33.333333%;max-width:33.333333%;}
-}
-@media (min-width:1200px){
-    .scroll-item{flex:0 0 25%;max-width:25%;}
-}
-
 /* Quando o rato tá em cima, a imagem da propriendade diminui e fica um pouco mais branco */
-.scroll-item .item-control .list-layout:hover .layout-image figure img, 
+.scroll-item .item-control .list-layout:hover .layout-image figure > img, /* Forçar que SÓ a imagem de fundo seja altera em vez de todos os elemetos <img> */
 .scroll-item .item-control .layout-display:hover .layout-image figure:first-child img{
     transform: scale(1,1);
     filter: opacity(80%)
@@ -520,7 +516,7 @@ html {
     margin:0;
 }
 
-.layout-image figure img{
+.layout-image figure > img{/* Forçar que SÓ a imagem de fundo seja altera em vez de todos os elemetos <img> */
     position:absolute;
     top:0;
     width:100%;
@@ -558,17 +554,13 @@ html {
     width: 32px;
 
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 
-    border: .7px solid #54595e;
+    background-color: rgba(25,28,31,.19);
     border-radius: 50%;
     font-size: .8125rem;
-    color: #4c555f;
 
-    background-color: black;
-    /* filter: opacity(60%); */
     margin-right: .8rem;
     cursor: pointer;
 }
@@ -681,13 +673,13 @@ html {
     /* Icon */
 .layout-footer .icon-house{
     /*content: url("font/icon/Home-icon.svg");*/ /*Esta propriedade não funcioa em todos os browseres*/
-    width: 15%;
+    width: 12px;
     margin-right: 7px;
 }
     /* Icon Alternativo */
 .layout-footer-alt .icon-house{
     /* content: url("font/icon/Home-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 15%;
+    width: 12px;
     margin-right: 7px;
     filter: invert(100%);
 }
@@ -704,13 +696,13 @@ html {
     /*Icon*/
 .layout-footer .icon-bath{
     /* content: url("font/icon/Bath-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 20%;
+    width: 12px;
     margin-right: 7px;
 }
     /* Icon Alternativo */
 .layout-footer-alt .icon-bath{
     /* content: url("font/icon/Bath-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 20%;
+    width: 12px;
     margin-right: 7px;
     filter: invert(100%);
 }
@@ -727,13 +719,13 @@ html {
 .layout-footer .icon-bed{
     margin-right: 7px;
     /* content: url("font/icon/Bed-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 20%;
+    width: 12px;
 }
     /* Icon Alternativo */
 .layout-footer-alt .icon-bed{
     margin-right: 7px;
     /* content: url("font/icon/Bed-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 20%;
+    width: 12px;
     filter: invert(100%);
 }
 
@@ -1077,56 +1069,130 @@ html {
     background-color: #003aa8;
 }
 
-.search-imovel{
-    border: solid red;
-    display: flex;
-    flex-direction: column;
+.blue-container{
+    background-color: #003aa8;
+    margin-top: -50px;
 }
 
+.search-imovel-set{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: white;
+    border: solid red;
+}
+
+#imovel-search{
+    padding: 45px 0;
+}
+
+.imovel-img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+
+    padding: 10px;
+}
+
+.search-imovel{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    gap: 10px;
+    padding: 10px;
+}
 
 .area-util {
-width: 100%; /* Width of the outside container */
+    width: 100%; /* Width of the outside container */
 }
 
 .idade {
     width: 100%; /* Width of the outside container */
-    }
+}
 
 /* The slider itself */
 .slider {
--webkit-appearance: none;  /* Override default CSS styles */
-appearance: none;
-width: 100%; /* Full-width */
-height: 25px; /* Specified height */
-background: #d3d3d3; /* Grey background */
-outline: none; /* Remove outline */
-opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
--webkit-transition: .2s; /* 0.2 seconds transition on hover */
-transition: opacity .2s;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
 }
 
 /* Mouse-over effects */
 .slider:hover {
-opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1; /* Fully shown on mouse-over */
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
--webkit-appearance: none; /* Override default look */
-appearance: none;
-width: 25px; /* Set a specific slider handle width */
-height: 25px; /* Slider handle height */
-background: #04AA6D; /* Green background */
-cursor: pointer; /* Cursor on hover */
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-width: 25px; /* Set a specific slider handle width */
-height: 25px; /* Slider handle height */
-background: #04AA6D; /* Green background */
-cursor: pointer; /* Cursor on hover */
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
 }
 
 .radiobuttons{
     display: flex;
+}
+
+
+.calcular{
+    background-color: #003aa8;
+    color: white;
+}
+
+.cenarios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    background-color: white;
+    border: 5px solid red;
+    border-radius: 15px;
+}
+
+.zona_cenario{
+    height: 300px;
+}
+
+.zona_cenario .zonaInfo{
+    max-height: 0;
+    padding: 0;
+    
+}
+
+.zona_cenario:hover .zonaInfo{
+    max-height: 200px;
+    padding: 10px;
+}
+
+
+
+/*Diferentes tamanhos dos quadradros*/
+@media (min-width:576px){
+    .scroll-item{flex:0 0 50%;max-width:50%;}
+    .grid-item{flex: 0 0 50%;max-width: 50%;}
+}
+@media (min-width:992px){
+    .scroll-item{flex:0 0 33.333333%;max-width:33.333333%;}
+    .grid-item{flex: 0 0 33.333333%;max-width: 33.333333%;}
+}
+@media (min-width:1200px){
+    .scroll-item{flex:0 0 25%;max-width:25%;}
 }

@@ -70,10 +70,10 @@
             <h2>Novidades</h2>
             <a class="full-list" role="button">Ver todos</a><br>
             <span class="nav-buttons">
-                <button role="button" >
+                <button role="button" id="Preview">
                     <img src="src/font/icon/Preview-icon.svg">
                 </button>
-                <button role="button" >
+                <button role="button" id="Next">
                     <img src="src/font/icon/Next-icon.svg">
                 </button>
             </span>
@@ -133,6 +133,9 @@
                                     <img src="src/img/preview/6cbf5926-66e8-414d-b4a2-4265ecb71872.jpg">
                                     <div class="image-overlay">
                                         <p class="money">150 000€</p>
+                                        <div class="circle-heart">
+                                            <img src="src/font/icon/heart-icon.svg">
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -172,6 +175,9 @@
                                     <img src="src/img/preview/6974102c-019b-4a37-b1f2-1ad08123bbcd.jpg">
                                     <div class="image-overlay">
                                         <p class="money">208 500€</p>
+                                        <div class="circle-heart">
+                                            <img src="src/font/icon/heart-icon.svg">
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -211,6 +217,9 @@
                                     <img src="src/img/preview/1cbc63e1-5974-49a7-b153-8d72e8c329fd.jpg">
                                     <div class="image-overlay">
                                         <p class="money">48 840€</p>
+                                        <div class="circle-heart">
+                                            <img src="src/font/icon/heart-icon.svg">
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -274,6 +283,9 @@
                                     <img src="src/img/preview/89bcfea0-0eb5-4799-9881-a0570e4847a5.jpg">
                                     <div class="image-overlay">
                                         <p class="money">650 000€</p>
+                                        <div class="circle-heart">
+                                            <img src="src/font/icon/heart-icon.svg">
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -313,6 +325,9 @@
                                     <img src="src/img/preview/L_7395bb8b5cf14bf987751195d07f84b1.jpg">
                                     <div class="image-overlay">
                                         <p class="money">390 000€</p>
+                                        <div class="circle-heart">
+                                            <img src="src/font/icon/heart-icon.svg">
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -352,6 +367,9 @@
                                     <img src="src/img/preview/6cc70c70-f7be-46d0-9d59-69a803696db3.jpg">
                                     <div class="image-overlay">
                                         <p class="money">769 000€</p>
+                                        <div class="circle-heart">
+                                            <img src="src/font/icon/heart-icon.svg">
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -391,6 +409,9 @@
                                     <img src="src/img/preview/L_75a3bdbb45144c87822e261f11a72d07.jpg">
                                     <div class="image-overlay">
                                         <p class="money">650 000€</p>
+                                        <div class="circle-heart">
+                                            <img src="src/font/icon/heart-icon.svg">
+                                        </div>
                                     </div>
                                 </figure>
                             </div>
@@ -636,11 +657,7 @@
         <div class="box-content">
             <h2>Pessoas a falar com pessoas. Todos os dias.</h2>
             <p>
-                Em Portugal, desde 2000, a RE/MAX Portugal tem vindo a consolidar a sua liderança. 
-                A força da marca, a eficiência do serviço e satisfação dos seus colaboradores 
-                têm vindo a ser reconhecidas e premiadas anualmente por várias entidades. 
-                Em Portugal, a RE/MAX é ainda líder em número de transacções, 
-                agências e agentes associados.
+                Em Portugal, desde 2000, a RE/MAX Portugal tem vindo a consolidar a sua liderança. A força da marca, a eficiência do serviço e satisfação dos seus colaboradores têm vindo a ser reconhecidas e premiadas anualmente por várias entidades. Em Portugal, a RE/MAX é ainda líder em número de transacções, agências e agentes associados.
             </p>
         </div>
         <div class="image-content">
@@ -660,9 +677,7 @@
         <div class="emp-text">
             <h2>Empreendimentos</h2>
             <p>
-                Se é investidor, comprador ou até mesmo construtor consulte a 
-                nossa carteira de empreendimentos RE/MAX. 
-                Pesquise todos os empreendimentos que a RE/MAX tem em carteira.
+                Se é investidor, comprador ou até mesmo construtor consulte a nossa carteira de empreendimentos RE/MAX. Pesquise todos os empreendimentos que a RE/MAX tem em carteira.
             </p>
             <button>Descobrir empreendimentos</button>
         </div>
@@ -848,61 +863,147 @@
         </div>
     </div>
 
-    <div class="home-componet" id="imovel-search">
-        <div class="search-imovel">
-            <h2>Test</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#003aa8" fill-opacity="1" d="M0,96L40,101.3C80,107,160,117,240,101.3C320,85,400,43,480,48C560,53,640,107,720,128C800,149,880,139,960,117.3C1040,96,1120,64,1200,69.3C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 
-            <div class="tipologia">
-                <h3>Tipologia</h3>
+    <div class="blue-container">
 
-                <label for="ts">Choose a car:</label>
+        <div class="home-componet" id="imovel-search">
 
-                <select name="ts" id="ts">
-                  <option value="t1">T1</option>
-                  <option value="t2">T2</option>
-                  <option value="t3">T3</option>
-                  <option value="t4">T4</option>
-                </select> 
-            </div>
+            <div class="search-imovel-set">
+                <img src="src/img/Imovel-img.jpg" class="imovel-img">
 
-            <div class="area-util">
-                <h3>Área útil</h3>
+                <div class="search-imovel">
+                    <h2>Calcular o preço do imóvel</h2>
+        
+                    <div class="tipologia">
+                        <h3>Tipologia</h3>
+        
+                        <label for="ts">Choose a car:</label>
+        
+                        <select name="ts" id="ts">
+                          <option value="t1">T1</option>
+                          <option value="t2">T2</option>
+                          <option value="t3">T3</option>
+                          <option value="t4">T4</option>
+                        </select> 
+                    </div>
+        
+                    <div class="area-util">
+                        <h3>Área útil</h3>
+        
+                        <input type="range" min="15000" max="2000000" value="15000" class="slider" id="myAreaInput">
+                        <p>Value: <span id="AreaOutput"></span>€</p>
+                    </div>
+        
+                    <div class="idade">
+                        <h3>Idade do imóvel</h3>
+        
+                        <input type="range" min="0" max="100" value="0" class="slider" id="myIdadeInput">
+                        <p>Value: <span id="IdadeOutput"></span> anos</p>
+                    </div>
+        
+                    <div class="garagem">
+                        <h3>Garagem</h3>
 
-                <input type="range" min="1" max="100" value="50" class="slider" id="myAreaInput">
-                <p>Value: <span id="AreaOutput"></span>€</p>
-            </div>
+                        <!-- <input type="checkbox"> -->
 
-            <div class="idade">
-                <h3>Idade do imóvel</h3>
+                        <div class="radiobuttons">
+                            <input type="radio" id="gar-sim" name="Garagem" value="Garagem-sim">
+                            <label for="Garagem-sim">Sim</label><br>
+                            <input type="radio" id="gar-nao" name="Garagem" value="Garagem-nao">
+                            <label for="Garagem-nao">Não</label><br> 
+                        </div>
+                        
+                    </div>
+        
+                    <div class="proximidade-tp">
+                        <h3>Proximidade de Transportes Públicos</h3>
+        
+                        <!-- <input type="checkbox"> -->
 
-                <input type="range" min="1" max="100" value="50" class="slider" id="myIdadeInput">
-                <p>Value: <span id="IdadeOutput"></span>€</p>
-            </div>
+                        <div class="radiobuttons">
+                            <input type="radio" id="tp-sim" name="Tp" value="Tp-sim">
+                            <label for="Tp-sim">Sim</label><br>
+                            <input type="radio" id="gar-nao" name="Tp" value="Tp-nao">
+                            <label for="Tp-nao">Não</label><br> 
+                        </div>
+                    </div>
+        
+                    <div class="calcular">
+                        <button>Calcurar o preço do imovel</button>
+                    </div>
 
-            <div class="garagem">
-                <h3>Garagem</h3>
-
-                <div class="radiobuttons">
-                    <input type="radio" id="gar-sim" name="Garagem" value="Garagem-sim">
-                    <label for="Garagem-sim">Sim</label><br>
-                    <input type="radio" id="gar-nao" name="Garagem" value="Garagem-nao">
-                    <label for="Garagem-nao">Não</label><br> 
                 </div>
             </div>
-
-            <div class="proximidade-tp">
-                <h3>Proximidade de Transportes Públicos</h3>
-
-                <div class="radiobuttons">
-                    <input type="radio" id="tp-sim" name="Tp" value="Tp-sim">
-                    <label for="Tp-sim">Sim</label><br>
-                    <input type="radio" id="gar-nao" name="Tp" value="Tp-nao">
-                    <label for="Tp-nao">Não</label><br> 
-                </div>
-            </div>
-
         </div>
+        
+        <!--Zona de cenários (aparece quando clica no botão calcular)-->
+        <div class="home-componet" >
+            <div class="cenarios">
+
+                <div class="zona_cenario" id="zona1">
+                    <h2>Zona 1</h2>
+                    <h3><span id="zona1Output"></span>€</h3>
+                    <div class="zonaInfo">
+                        <p>
+                            €/m<sup>2</sup>: <span id="zona1InfoMoney"></span>
+                        </p>
+                        <p>
+                            área: <span id="zona1InfoArea"></span>
+                        </p>
+                        <p>
+                            ***
+                        </p>
+                        <p>
+                            ***
+                        </p>
+                    </div>
+                </div>
+
+                <div class="zona_cenario" id="zona2">
+                    <h2>Zona 1</h2>
+                    <h3><span id="zona2Output"></span>€</h3>
+                    <div class="zonaInfo">
+                        <p>
+                            €/m<sup>2</sup>: <span id="zona2InfoMoney"></span>
+                        </p>
+                        <p>
+                            área: <span id="zona2InfoArea"></span>
+                        </p>
+                        <p>
+                            ***
+                        </p>
+                        <p>
+                            ***
+                        </p>
+                    </div>
+                </div>
+
+                <div class="zona_cenario" id="zona3">
+                    <h2>Zona 1</h2>
+                    <h3><span id="zona3Output"></span>€</h3>
+                    <div class="zonaInfo">
+                        <p>
+                            €/m<sup>2</sup>: <span id="zona3InfoMoney"></span>
+                        </p>
+                        <p>
+                            área: <span id="zona3InfoArea"></span>
+                        </p>
+                        <p>
+                            ***
+                        </p>
+                        <p>
+                            ***
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#003aa8" fill-opacity="1" d="M0,256L34.3,245.3C68.6,235,137,213,206,192C274.3,171,343,149,411,154.7C480,160,549,192,617,218.7C685.7,245,754,267,823,256C891.4,245,960,203,1029,176C1097.1,149,1166,139,1234,122.7C1302.9,107,1371,85,1406,74.7L1440,64L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
 
     <div id="footer">
         <div class="row">
