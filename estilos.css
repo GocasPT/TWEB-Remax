@@ -26,11 +26,29 @@ html {
 }
 
 .List {
+    display: flex;
     flex-grow: 1;
-    margin-left: 820px;
-    justify-content: space-between; /* Ajustar Distancia Entre Caixas */
+    margin-right: 30px
+    /* margin-left: 820px; */ /*Nota(Gui) - Isto estraga a sua configuração e quando é uma resoluçao mais pequena fica tudo compacto. Para pormos tudo para a direita vamos usar justify-content: flex-end*/
+    /* justify-content: space-between */; /* Ajustar Distancia Entre Caixas */ /*Nota(Gui) - isto não ta a fazer nada, é melhor usar o gap e considerar as lista um flex*/
+    justify-content: flex-end;
+    gap: 20px;
 }
 
+.List ul{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.List ul li:last-child{
+    display: flex;
+    align-items: center;
+}
+
+.List ul li:last-child img{
+    height: 24px;
+    filter: invert(21%) sepia(3%) saturate(8%) hue-rotate(342deg) brightness(96%) contrast(91%);
+}
 
 .BarraVertical li {
     display: block;
@@ -647,10 +665,10 @@ html {
     font-size: .6875rem;
     font-weight: 700;
     height: 13%;
-    border-radius: 0 0 12px 12px;
+    /* border-radius: 0 0 12px 12px; */
 }
 
-.layout-footer .type{
+.layout-footer .type, .layout-footer-alt .type{
     display: inline-block;
     flex: 1 0;
     font-size: .6875rem;
@@ -666,7 +684,7 @@ html {
 
 /*Área da casa e seu icon*/
     /*Numero*/
-.layout-footer .area{
+.layout-footer .area, .layout-footer-alt .area{
     margin-right: 7px;
     display: flex;
     align-items: center;
@@ -675,43 +693,44 @@ html {
     /* Icon */
 .layout-footer .icon-house{
     /*content: url("font/icon/Home-icon.svg");*/ /*Esta propriedade não funcioa em todos os browseres*/
-    width: 12px;
+    width: 11px;
     margin-right: 7px;
+    filter: invert(21%) sepia(3%) saturate(8%) hue-rotate(342deg) brightness(96%) contrast(91%);
 }
     /* Icon Alternativo */
 .layout-footer-alt .icon-house{
     /* content: url("font/icon/Home-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 12px;
+    width: 11px;
     margin-right: 7px;
     filter: invert(100%);
 }
 
 /*Números de WC e seu icon*/
     /*Numero*/
-.layout-footer .bathroom{
+.layout-footer .bathroom, .layout-footer-alt .bathroom{
     margin-right: 7px;
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
 }
-
     /*Icon*/
 .layout-footer .icon-bath{
     /* content: url("font/icon/Bath-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 12px;
+    width: 11px;
     margin-right: 7px;
+    filter: invert(21%) sepia(3%) saturate(8%) hue-rotate(342deg) brightness(96%) contrast(91%);
 }
     /* Icon Alternativo */
 .layout-footer-alt .icon-bath{
     /* content: url("font/icon/Bath-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 12px;
+    width: 11px;
     margin-right: 7px;
     filter: invert(100%);
 }
 
 /*Números de Quartos e seu icon*/
     /*Numero*/
-.layout-footer .bedroom{
+.layout-footer .bedroom, .layout-footer-alt .bedroom{
     margin-right: 7px;
     display: flex;
     align-items: center;
@@ -719,15 +738,17 @@ html {
 }
     /*Icon*/
 .layout-footer .icon-bed{
-    margin-right: 7px;
     /* content: url("font/icon/Bed-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 12px;
+    width: 11px;
+    margin-right: 7px;
+    filter: invert(21%) sepia(3%) saturate(8%) hue-rotate(342deg) brightness(96%) contrast(91%);
+    
 }
     /* Icon Alternativo */
 .layout-footer-alt .icon-bed{
-    margin-right: 7px;
     /* content: url("font/icon/Bed-icon.svg"); *//*Esta propriedade não funcioa em todos os browseres*/
-    width: 12px;
+    width: 11px;
+    margin-right: 7px;
     filter: invert(100%);
 }
 
