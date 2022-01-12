@@ -10,6 +10,7 @@ html {
     font-family: 'Nunito Sans', sans-serif;
     padding: 0;
     border-bottom: 10px solid #003aa8;
+    scroll-behavior: smooth;
 }
 
 .logo {
@@ -28,9 +29,7 @@ html {
 .List {
     display: flex;
     flex-grow: 1;
-    margin-right: 30px
-    /* margin-left: 820px; */ /*Nota(Gui) - Isto estraga a sua configuração e quando é uma resoluçao mais pequena fica tudo compacto. Para pormos tudo para a direita vamos usar justify-content: flex-end*/
-    /* justify-content: space-between */; /* Ajustar Distancia Entre Caixas */ /*Nota(Gui) - isto não ta a fazer nada, é melhor usar o gap e considerar as lista um flex*/
+    margin-right: 30px;
     justify-content: flex-end;
     gap: 20px;
 }
@@ -100,11 +99,12 @@ html {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    margin: 0;
 }
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 .dropdown2 {
     color: #4c555f;
@@ -133,6 +133,16 @@ html {
     display: block;
 }
 
+.aling{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.MainBar button:hover span, .MainBar li:hover a{
+    color: #003aa8;
+}
+
 .crop {
     overflow: hidden; /* Esconder Excesso (para cortar a imagem)*/
     object-fit:cover;
@@ -143,12 +153,30 @@ html {
     height: 100%;
     object-fit:cover;
     margin: -144px 0 -144px 0;
+    filter: brightness(80%);
 }
 
+.search-centralizer{
+    position: absolute;
+    padding: 2rem 1rem;
+    width: 100%;
+    /* text-align: center; */
+    top: 28.5%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-layout{
+    width: 55%;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+}
 
 .Titulo {
     position: absolute;
-    left: 23%;
+    /* left: 23%; */
     bottom: 63%;
     color: white;
     font-size:1.4rem;
@@ -156,63 +184,9 @@ html {
     letter-spacing: -3px; /* Reduzir o spacing igual a remax */
 }
 
-
-.Pesquisa {  
-    border: none;
-    outline: none;
-    font-family: 'Nunito Sans', sans-serif;
-    position: absolute;
-    border-style: none;
-    color: white;
-    font-size: 1.0rem;
-    width: 54%;
-    height: 6.6%;
-    left: 23%;
-    top: 43%;
-    padding-left: 15px;
-    color: black;
-
-    padding-right: 25px;
-    background: url("src/font/icon/search-icon.svg") no-repeat right;
-    background-size: 20px;
-    
-    background-color: white;
+.button-row{
+    display: flex;
 }
-
-
-.butaocomprar {
-    font-family: 'Nunito Sans', sans-serif;
-    position: absolute;
-    left: 23%;
-    top: 37.7%;
-}
-
-.butaoarrendar {
-    font-family: 'Nunito Sans', sans-serif;
-    position: absolute;
-    left: 30.5%;
-    top: 37.7%;
-}
-
-.pub {
-    margin-left: 17.55%;
-    margin-top: 3.5%;
-    width: 64.9%;
-    height: 64.9%;
-    border-radius: 12px;
-    vertical-align: middle;
-}
-
-
-.pub2 {
-    margin-left: 17.55%;
-    margin-top: 3.5%;
-    width: 64.9%;
-    height: 64.9%;
-    border-radius: 12px;
-    vertical-align: middle;
-}
-
 
 .butaocomprar {
     border: none;
@@ -229,7 +203,6 @@ html {
     cursor: pointer;
 }
 
-
 .butaoarrendar {
     border: none;
     border-top-right-radius: 5px;
@@ -242,6 +215,114 @@ html {
     display: inline-block;
     font-size: 13px;
     cursor: pointer;
+}
+
+.search-bar{
+    width: 100%;
+    display: flex;
+}
+
+.search-bar-set{
+    background-color: white;
+    padding: 0 15px;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.Pesquisa {  
+    border: none;
+    outline: none;
+    font-family: 'Nunito Sans', sans-serif;
+    /* position: absolute; */
+    border-style: none;
+    color: white;
+    font-size: 1.0rem;
+    /* width: 54%; */
+    /* height: 6.6%; */
+    /* left: 23%; */
+    /* top: 43%; */
+    /* padding-left: 15px; */
+    color: black;
+
+    /* padding-right: 25px; */
+    /* background: url("src/font/icon/search-icon.svg") no-repeat right;
+    background-size: 20px; */
+    
+    flex: 1 0 0;
+    height: 65px;
+}
+
+.search-bar button{
+    width: 65px;
+    border: none;
+    background-color: white;
+}
+
+.search-bar button img{
+    width: 20px;
+    height: 20px;
+    transition: width 0.2s linear, height 0.2s linear;
+}
+
+.search-bar button img:hover{
+    width: 16px;
+    height: 16px;
+}
+
+.horizontal-center{
+    display: flex;
+    justify-content: center;
+}
+
+.button-down{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s,opacity .8s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 60vh;
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+
+.button-down p{
+    color: white;
+    font-size: 16px;
+}
+
+.button-down img{
+    filter: invert(1);
+    width: 28px;
+    height: 28px;
+}
+
+.pub {
+    /* margin-left: 17.55%;
+    margin-top: 3.5%; */
+    /* width: 64.9%;
+    height: 64.9%; */
+    width: 100%;
+    border-radius: 12px;
+    vertical-align: middle;
+}
+
+
+.pub2 {
+    /* margin-left: 17.55%;
+    margin-top: 3.5%;
+    width: 64.9%;
+    height: 64.9%; */
+    width: 100%;
+    border-radius: 12px;
+    vertical-align: middle;
 }
 
 .redes_sociais{
@@ -407,19 +488,10 @@ html {
 }
 
 .home-componet{
-    margin: auto;
+    /* margin: auto;
     width: 84%;
-    padding: 64px 175px 0;
-}
-
-/*Quando o ecra é pequeno de mais, a lista dos itens fica a cubrir o compirmentro todo da página*/
-@media screen and (max-width: 991px) {
-    .home-componet{padding: 0px; width: auto;}
-}
-
-/*O texto "Ver tudo" muda para de posiçao quando o ecra é pequeno*/
-@media only screen and (max-width:991px){
-    .full-list{order:3;}
+    padding: 64px 175px 0; */
+    padding:4rem calc(10vw - 10px) 0;
 }
 
 .title{
@@ -1106,10 +1178,6 @@ html {
     border: solid red;
 }
 
-#imovel-search{
-    padding: 45px 0;
-}
-
 .imovel-img{
     width: 500px;
     height: 500px;
@@ -1179,33 +1247,70 @@ html {
     color: white;
 }
 
+#cenarios{
+    display: none;
+    padding:4rem 30vw 0;
+}
+
 .cenarios{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-
+    gap: 3rem;
+    
     background-color: white;
     border: 5px solid red;
     border-radius: 15px;
+
 }
 
 .zona_cenario{
     height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zona_cenario h3{
+    margin: auto;
 }
 
 .zona_cenario .zonaInfo{
+    overflow:hidden;
     max-height: 0;
+    transition: max-height 0.25s ease-in-out;
+
+    margin-right: auto;
     padding: 0;
+    list-style-type: none;
     
+    color: gray;
 }
 
 .zona_cenario:hover .zonaInfo{
     max-height: 200px;
-    padding: 10px;
+    pointer-events: none;
+}
+
+.zona_cenario:hover h3{
+    margin: calc(auto/10);
+}
+
+.zona_cenario .zonaInfo li{
+    padding: 5px 0;
 }
 
 
+/*Quando o ecra é pequeno de mais, a lista dos itens fica a cubrir o compirmentro todo da página*/
+@media screen and (max-width: 991px) {
+    .home-componet{padding: 0px; width: auto;}
+}
+
+/*O texto "Ver tudo" muda para de posiçao quando o ecra é pequeno*/
+@media only screen and (max-width:991px){
+    .full-list{order:3;}
+}
 
 /*Diferentes tamanhos dos quadradros*/
 @media (min-width:576px){

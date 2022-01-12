@@ -8,18 +8,22 @@
     <link href="estilos.css" rel="stylesheet">
 </head>
 <body>
-
+    
 
     <div class="MainBar">
         <img class="logo" src="src/img/logo.jpg">   
 
-        <div class="dropdown">
-            <span>Português</span>
-            <div class="dropdown-content">
-            <p>Português</p>
-            <p>Inglês</p>
+        <button role="button" class="dropdown" onclick="SwitchDisplay('content')">
+            <span class="aling">
+                Português
+                <img src="src/font/icon/chevron-down.svg">
+            </span>
+            
+            <div class="dropdown-content" id="content">
+                <p>Inglês</p>
+                <p>Português</p>
             </div>
-        </div>
+        </button>
 
         <div class="List">
             <ul>
@@ -28,12 +32,15 @@
                 <li><a href="#">Comprar</a></li>
                 <li><a href="#">Vender</a></li>
     
-                <div class="dropdown2">
-                    <span>Agências</span>
+                <div role="button" class="dropdown2">
+                    <span class="aling">
+                        Agências
+                        <img src="src/font/icon/chevron-down.svg">
+                    </span>
                     <div class="dropdown2-content">
-                    <p>Procurar um Agente ou Agência</p>
-                    <p>Seja um Agente RE/MAX</p>
-                    <p>Franchising</p>
+                        <p>Procurar um Agente ou Agência</p>
+                        <p>Seja um Agente RE/MAX</p>
+                        <p>Franchising</p>
                     </div>
                 </div>
     
@@ -49,22 +56,50 @@
 
     <div class="crop">
         <img class="background" src="src/img/background.jpg" alt = "background" >
-        <div class = "Titulo">
-            <h1>Isto nunca foi tão simples!</h1>
-        </div>
-        <button class="butaoarrendar">Arrendar</button>
-        <button class="butaocomprar">Comprar</button>
-        <input type="text" class="Pesquisa" placeholder="Onde? (Concelho ou Freguesia ou Zona ou Morada)">
     </div>
     
+    <div class="search-centralizer">
+        <div class="search-layout">
+            <div class = "Titulo">
+                <h1>Isto nunca foi tão simples!</h1>
+            </div>
+            <nav class="button-row">
+                <a class="butaocomprar">Comprar</a>
+                <a class="butaoarrendar">Arrendar</a>
+            </nav>
+            <!-- <div>
+                <input type="text" class="Pesquisa" placeholder="Onde? (Concelho ou Freguesia ou Zona ou Morada)">
+            </div> -->
+            <div class="search-bar">
+                <div class="search-bar-set">
+                    <input type="text" class="Pesquisa" placeholder="Onde? (Concelho ou Freguesia ou Zona ou Morada)">
+                </div>
+                <button role="button">
+                    <img src="src/font/icon/search-icon.svg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="horizontal-center">
+        <button class="button-down" id="DownButton" onclick="document.getElementById('AnchorPoint').scrollIntoView();">
+            <img src="src/font/icon/arrow-down.svg">
+            <p>Ver Mais</p>
+        </button>
+    </div>
     
-    <a href="#imovel-search">
-        <img class="pub" src="src/img/micrositecampaign-banner.jpg" alt = "pub" >
-    </a>
-    <img class="pub2" src="src/img/multimedia-banner.jpg" alt = "pub" >
+    <div class="home-componet">
+        <a href="#imovel-search">
+            <img class="pub" src="src/img/micrositecampaign-banner.jpg" alt = "pub" >
+        </a>
+    </div>
+
+    <div class="home-componet">
+        <img class="pub2" src="src/img/multimedia-banner.jpg" alt = "pub" >
+    </div>
 
     <!--Novidade-->
-    <div class="home-componet">
+    <div class="home-componet" id="AnchorPoint">
 
         <div class="title">
             <h2>Novidades</h2>
@@ -867,7 +902,7 @@
 
     <div class="blue-container">
 
-        <div class="home-componet" id="imovel-search">
+        <div class="home-componet">
 
             <div class="search-imovel-set">
                 <img src="src/img/Imovel-img.jpg" class="imovel-img">
@@ -905,8 +940,6 @@
                     <div class="garagem">
                         <h3>Garagem</h3>
 
-                        <!-- <input type="checkbox"> -->
-
                         <div class="radiobuttons">
                             <input type="radio" id="gar-sim" name="Garagem" value="Garagem-sim">
                             <label for="Garagem-sim">Sim</label><br>
@@ -918,8 +951,6 @@
         
                     <div class="proximidade-tp">
                         <h3>Proximidade de Transportes Públicos</h3>
-        
-                        <!-- <input type="checkbox"> -->
 
                         <div class="radiobuttons">
                             <input type="radio" id="tp-sim" name="Tp" value="Tp-sim">
@@ -930,72 +961,72 @@
                     </div>
         
                     <div class="calcular">
-                        <button>Calcurar o preço do imovel</button>
+                        <button onclick="SwitchDisplay('cenarios')">Financiamento</button>
                     </div>
 
                 </div>
             </div>
         </div>
         
-        <!--Zona de cenários (aparece quando clica no botão calcular)-->
-        <div class="home-componet" >
+        <!--Zona de cenários-->
+        <div class="home-componet" id="cenarios">
             <div class="cenarios">
 
                 <div class="zona_cenario" id="zona1">
                     <h2>Zona 1</h2>
                     <h3><span id="zona1Output"></span>€</h3>
-                    <div class="zonaInfo">
-                        <p>
+                    <ul class="zonaInfo">
+                        <li>
                             €/m<sup>2</sup>: <span id="zona1InfoMoney"></span>
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             área: <span id="zona1InfoArea"></span>
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             ***
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             ***
-                        </p>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="zona_cenario" id="zona2">
                     <h2>Zona 1</h2>
                     <h3><span id="zona2Output"></span>€</h3>
-                    <div class="zonaInfo">
-                        <p>
+                    <ul class="zonaInfo">
+                        <li>
                             €/m<sup>2</sup>: <span id="zona2InfoMoney"></span>
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             área: <span id="zona2InfoArea"></span>
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             ***
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             ***
-                        </p>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="zona_cenario" id="zona3">
                     <h2>Zona 1</h2>
                     <h3><span id="zona3Output"></span>€</h3>
-                    <div class="zonaInfo">
-                        <p>
+                    <ul class="zonaInfo">
+                        <li>
                             €/m<sup>2</sup>: <span id="zona3InfoMoney"></span>
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             área: <span id="zona3InfoArea"></span>
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             ***
-                        </p>
-                        <p>
+                        </li>
+                        <li>
                             ***
-                        </p>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
