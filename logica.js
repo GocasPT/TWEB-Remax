@@ -2,12 +2,18 @@
 var switchPower
 
 function SwitchDisplay(IdTaget) {
-    if(switchPower == 0){ //Display: none → desaparece
+    if (switchPower == 0){ //Display: none → desaparece
+        if (IdTaget === 'content'){
+            document.getElementById(IdTaget).parentElement.classList.remove("selected")
+        }
 
         document.getElementById(IdTaget).style.display = "none";
         return switchPower = 1;
 
-    }else{ //Diplsa: block → aparece
+    } else { //Diplsa: block → aparece
+        if (IdTaget === 'content'){
+            document.getElementById(IdTaget).parentElement.classList.add("selected")
+        }
 
         document.getElementById(IdTaget).style.display = "block";
         return switchPower = 0;

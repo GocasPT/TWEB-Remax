@@ -13,17 +13,20 @@
     <div class="MainBar">
         <img class="logo" src="src/img/logo.jpg">   
 
-        <button role="button" class="dropdown" onclick="SwitchDisplay('content')">
-            <span class="aling">
-                Português
-                <img src="src/font/icon/chevron-down.svg">
-            </span>
-            
+        <div class="Mainbar-button">
+            <div role="button" class="Mainbar-button-set">
+                <button role="button" class="dropdown" onclick="SwitchDisplay('content')">
+                    <span class="aling">
+                        Português
+                        <img src="src/font/icon/chevron-down.svg">
+                    </span>
+                </button>
+            </div>
             <div class="dropdown-content" id="content">
                 <p>Inglês</p>
                 <p>Português</p>
             </div>
-        </button>
+        </div>
 
         <div class="List">
             <ul>
@@ -32,15 +35,19 @@
                 <li><a href="#">Comprar</a></li>
                 <li><a href="#">Vender</a></li>
     
-                <div role="button" class="dropdown2">
-                    <span class="aling">
-                        Agências
-                        <img src="src/font/icon/chevron-down.svg">
-                    </span>
-                    <div class="dropdown2-content">
-                        <p>Procurar um Agente ou Agência</p>
-                        <p>Seja um Agente RE/MAX</p>
-                        <p>Franchising</p>
+                <div class="Mainbar-button">
+                    <div role="button" class="Mainbar-button2-set hover-shadow">
+                        <div role="button" class="dropdown2">
+                            <span class="aling">
+                                Agências
+                                <img src="src/font/icon/chevron-down.svg">
+                            </span>
+                        </div>
+                        <div class="dropdown2-content">
+                            <p role="button">Procurar um Agente ou Agência</p>
+                            <p role="button">Seja um Agente RE/MAX</p>
+                            <p role="button">Franchising</p>
+                        </div>
                     </div>
                 </div>
     
@@ -105,7 +112,7 @@
             <h2>Novidades</h2>
             <a class="full-list" role="button">Ver todos</a><br>
             <span class="nav-buttons">
-                <button role="button" id="Preview">
+                <button role="button" id="Preview" onclick="Preview()">
                     <img src="src/font/icon/Preview-icon.svg">
                 </button>
                 <button role="button" id="Next">
@@ -927,14 +934,19 @@
                         <h3>Área útil</h3>
         
                         <input type="range" min="15000" max="2000000" value="15000" class="slider" id="myAreaInput">
-                        <p>Value: <span id="AreaOutput"></span>€</p>
+                        <p>
+                            <span id="AreaOutput"></span> m<sup>2
+
+                            </sup></p>
                     </div>
         
                     <div class="idade">
                         <h3>Idade do imóvel</h3>
         
                         <input type="range" min="0" max="100" value="0" class="slider" id="myIdadeInput">
-                        <p>Value: <span id="IdadeOutput"></span> anos</p>
+                        <p>
+                            <span id="IdadeOutput"></span> anos
+                        </p>
                     </div>
         
                     <div class="garagem">
