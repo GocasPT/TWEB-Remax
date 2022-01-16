@@ -1,8 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap'); */ /* Importar fonte */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&display=swap'); /* Importar a fonte 'Nunito Sans' com os tamanhos 300, 400, 700 e 900 */
 
 body{
     margin: 0; /*Para tirar as bordas laterais EM TODO O SITE*/
+    overflow-x: hidden
 }
 
 html {
@@ -18,12 +18,13 @@ html {
     box-sizing:border-box;
 }
 
+
 .home-componet h2{
     margin-top:0;
-    margin-bottom:.5rem;
-    font-weight:700;
+    margin-bottom:1.063rem; /*17px*/
+    font-weight: 540;
     line-height:1.2;
-    font-size:2rem;
+    font-size:1.6rem;
     padding: 10px;
 }
 
@@ -137,9 +138,18 @@ html {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    /* padding: 12px 16px; */
     z-index: 1;
     margin: 0;
+}
+
+.dropdown-content div{
+    padding: 6px 16px;
+}
+
+.dropdown-content div:last-child{
+    background-color: #003aa8;
+    color: #f9f9f9;
 }
 
 .dropdown2 {
@@ -163,7 +173,7 @@ html {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 200px; /* Depois de colocar o botão dar fix (aumentar) aqui */
+    min-width: 200px; 
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     top: 63px;
@@ -251,6 +261,7 @@ html {
 
 .button-row{
     display: flex;
+    padding-top: 50px;
 }
 
 .butaocomprar {
@@ -339,7 +350,7 @@ html {
     justify-content: center;
 }
 
-.button-down{
+.button-down{ 
     visibility: visible;
     opacity: 1;
     transition: visibility 0s linear 0s,opacity .8s;
@@ -350,17 +361,18 @@ html {
     justify-content: center;
 
     position: fixed;
-    top: 60vh;
+    top: 65vh;
     background:none;
     border:none;
     margin:0;
-    padding:0;
     cursor: pointer;
 }
 
 .button-down p{
     color: white;
     font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
 }
 
 .button-down img{
@@ -390,9 +402,157 @@ html {
     vertical-align: middle;
 }
 
+
 .home-componet{
-    padding:4rem calc(10vw - 10px) 0; /*Ao adionar padding pedente do tamanho da tela faz que todos os compoenente ficam centralizados*/
+    padding:4rem 325px 0; /*Ao adionar padding pedente do tamanho da tela faz que todos os compoenente ficam centralizados aqui*/
 }
+
+@media screen and (max-width: 1650px) {
+
+    .button-down{ top: 50vh; }
+    .home-componet{padding:4rem calc(10vw - 10px) 0;}
+
+}
+
+@media screen and (max-width: 1500px) {
+    .home-componet{padding:4rem calc(10vw - 10px) 0;}
+
+    .Titulo {bottom: 70%; font-size: 20px; letter-spacing: -2px;}
+
+    .search-centralizer { top: 24%;}
+
+    .button-row { padding: 0px; }
+
+    .button-down{ top: 42vh; }
+}
+
+@media screen and (max-width: 1366px) { 
+
+    .Titulo {bottom: 70%; font-size: 20px; letter-spacing: -2px;}
+
+    .search-centralizer { top: 20%;}
+
+    .button-row { padding: 0px; }
+
+    .button-down{ top: 38vh; }
+
+}
+
+@media screen and (max-width: 1240px) { 
+
+    .Titulo {bottom: 70%; font-size: 20px; letter-spacing: -2px;}
+
+    .search-centralizer { top: 17%;}
+
+    .button-row { padding: 0px; }
+
+    .button-down{ top: 33vh; }
+
+}
+
+@media screen and (max-width: 1125px) { 
+
+    .Titulo {bottom: 60%; font-size: 18px; letter-spacing: -2px;}
+
+    .search-centralizer { top: 13%;}
+
+    .button-row { padding: 0px; }
+    .button-down{ display: none; }
+
+}
+
+@media screen and (max-width: 1020px) { 
+
+    .Titulo {bottom: 60%; font-size: 18px; letter-spacing: -2px;}
+
+    .search-centralizer { top: 12%;}
+
+    .button-row { padding: 0px; }
+    .button-down{ display: none; }
+
+}
+
+/*Quando o ecra é pequeno de mais, a lista dos itens fica a cubrir o compirmentro todo da página*/
+@media screen and (max-width: 991px) {
+    .home-componet{padding: 0px; width: auto;}    
+    .Titulo {bottom: 64%; font-size: 14px; letter-spacing: -2px;}    
+    .search-centralizer { top: 10%;}
+
+    .pub { width: 64.9%; height: 64.9%; margin-top: 2%; margin-left: 16%;}
+    .pub2 { width: 64.9%; height: 64.9%; margin-top: 2%; margin-left: 16%;}
+
+    .button-row { padding: 0px; }
+    .button-down{ display: none; }
+
+}
+
+@media screen and (max-width: 960px) { 
+
+    .Titulo {bottom: 55%; font-size: 16px; letter-spacing: -2px;}
+
+    .search-centralizer { top: 8%;}
+
+    .button-row { padding: 0px; }
+    .button-down{ display: none; }
+
+}
+
+@media screen and (max-width: 920px) { 
+
+    .Titulo {display: none;}
+
+    .search-centralizer { top: 6%;}
+
+    .button-row { padding: 0px; }
+    .button-down{ display: none; }
+
+}
+
+@media screen and (max-width: 880px) { 
+
+    .Titulo {display: none;}
+
+    .button-row { display: none; padding: 0px; }
+
+    .search-centralizer { top: 8%;}
+    .button-down{ display: none; }
+
+}
+
+@media screen and (max-width: 810px) { 
+
+    .Titulo {display: none;}
+
+    .button-row { display: none; padding: 0px; }
+
+    .search-centralizer { top: 6%;}
+    .button-down{ display: none; }
+
+}
+
+@media screen and (max-width: 765px) { 
+
+    .Titulo {display: none;}
+
+    .button-row { display: none; padding: 0px; }
+
+    .search-centralizer { top: 4.5%;}
+    .button-down{ display: none; }
+
+}
+
+
+@media screen and (max-width: 750px) { 
+
+    .Titulo {display: none;}
+
+    .button-row { display: none; padding: 0px; }
+
+    .search-centralizer { top: 4.5%;}
+    .button-down{ display: none; }
+
+}
+
 
 .title{
     display: flex;
@@ -941,7 +1101,8 @@ html {
 }
 
 .image-content .buttons .button-agente{
-    font-weight: 900;
+    font-weight: 540;
+    font-family: 'Nunito Sans', sans-serif;
     background-color: #003aa8;
     color: white;
     transition: background-color 0.1s ease-out; /*Transição para mudar a cor de fundo do butão*/
@@ -952,7 +1113,8 @@ html {
 }
 
 .image-content .buttons .button-agencia{
-    font-weight: 900;
+    font-weight: 540;
+    font-family: 'Nunito Sans', sans-serif;
     background-color: white;
     color: black;
 }
@@ -972,10 +1134,12 @@ html {
 
 .emp-text h2{
     padding: 0px;
+    font-size: 35px;
 }
 
 .emp-text button{
-    font-weight: 900;
+    font-weight: 540;
+    font-family: 'Nunito Sans', sans-serif;
     border: none;
     width: 225px;
     height: 40px;
@@ -1074,127 +1238,186 @@ html {
     color: #fff;
     background-color: #003aa8;
 }
+
 /*Parte do calculo*/
 .blue-container{
-    background-color: #003aa8;
+    background-color: #07539b;
     margin-top: -50px;
+}
+
+.red-container{
+    background-color: #fff;
+    margin-top: -50px;
+    padding-top: 100px;
+    padding-bottom: 150px;
 }
 
 .search-imovel-set{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
 
     background-color: white;
-    border: solid red;
-    border-radius: 20px;
+    border: solid #0a3686;
+    border-radius: 40px;
 }
 
 .imovel-img{
     width: 500px;
     height: 500px;
     object-fit: cover;
-
-    padding: 10px;
+    border-radius: 15px;
+    margin-left: 35px;
 }
 
 .search-imovel{
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
+    /* flex-grow: 2; */
     gap: 10px;
     padding: 10px;
 }
 
-.area-util, .idade {
-    width: 100%; 
+.search-imovel h2{
+    padding-left: 150px;
 }
 
-.slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 25px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-}
-
-/* Mouse-over effects */
-.slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-}
-
-.slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
-}
-
-
-/*Chrome*/
-/* @media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type='range'] {
-      overflow: hidden;
-      width: 80px;
-      -webkit-appearance: none;
-      background-color: #9a905d;
-    }
-    
-    input[type='range']::-webkit-slider-runnable-track {
-      height: 10px;
-      -webkit-appearance: none;
-      color: #13bba4;
-      margin-top: -1px;
-    }
-    
-    input[type='range']::-webkit-slider-thumb {
-      width: 10px;
-      -webkit-appearance: none;
-      height: 10px;
-      cursor: ew-resize;
-      background: #434343;
-      box-shadow: -80px 0 0 80px #43e5f7;
-    }
-
-} */
-/** FF*/
-/* input[type="range"]::-moz-range-progress {
-  background-color: #43e5f7; 
-}
-input[type="range"]::-moz-range-track {  
-  background-color: #9a905d;
-} */
-/* IE*/
-/* input[type="range"]::-ms-fill-lower {
-  background-color: #43e5f7; 
-}
-input[type="range"]::-ms-fill-upper {  
-  background-color: #9a905d;
-} */
-
-
-.radiobuttons{
+.search-imovel .row{
     display: flex;
+    flex-wrap: nowrap;
+    gap: 78px;
 }
 
+.search-imovel .row .proximidade-tp{
+    flex: 0 0 100%;
+}
+
+.area-util {
+    width: 100%;
+}
+
+.idade {
+    width: 100%;
+}
+
+/*A barra em si*/
+.slider {
+    -webkit-appearance: none;
+    width: 100% ; 
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+    height: 15px;
+    border-radius: 5px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+/*O ponteiro*/
+.slider::-webkit-slider-thumb { /*Chrome, Opera, Safari, Edge*/
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #07539b;
+    cursor: pointer;
+
+    border-radius: 50%; 
+}
+
+.slider::-moz-range-thumb { /*Firefox*/
+    width: 30px;
+    height: 30px;
+    background: #04AA6D;
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.SwitchNovo {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.SwitchNovo input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.AtivarDesativar {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.AtivarDesativar:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .AtivarDesativar {
+    background-color: #07539b;
+}
+
+input:focus + .AtivarDesativar {
+    box-shadow: 0 0 1px #07539b;
+}
+
+input:checked + .AtivarDesativar:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.AtivarDesativar.round {
+    border-radius: 34px;
+}
+
+.AtivarDesativar.round:before {
+    border-radius: 50%;
+}
 
 .calcular{
-    background-color: #003aa8;
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.calcular button{
+    background-color: #07539b;
     color: white;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    margin: 0 10px;
+} 
+
+.calcular button img{
+    width: 32px;
+    height: 32px;
+    filter: invert(1);
 }
 
 #cenarios{
@@ -1209,8 +1432,10 @@ input[type="range"]::-ms-fill-upper {
     gap: 3rem;
     
     background-color: white;
-    border: 5px solid red;
+    border: 5px solid #0a3686;
     border-radius: 15px;
+
+    padding-top: 100px;
 
 }
 
@@ -1251,6 +1476,158 @@ input[type="range"]::-ms-fill-upper {
     padding: 5px 0;
 }
 
+#finaça-search{
+    padding:4rem 35vw 20px;
+}
+
+.search-finança-set{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 25px;
+
+    background-color: white;
+    border: solid #003aa8;
+    border-radius: 25px;
+    border-style:dashed;
+
+}
+
+.finanças-input{
+    margin-top: 1rem;
+}
+
+.finanças-input div{
+    margin: .8rem 0;
+}
+
+.financiamento{
+    display: flex;
+}
+
+#imovel-search{
+    margin-bottom: 200px;
+}
+
+.financiamento button{
+    background-color: #07539b; 
+    color: white;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    margin: 0 10px 1rem;
+}
+
+.financiamento button img{
+    width: 32px;
+    height: 32px;
+    filter: invert(1);
+}
+
+#creditos{
+    display: none;
+}
+
+.creditos{
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-rows: 2fr 20px 2fr;
+    /* column-gap: 20px;
+    row-gap: 10px; */
+}
+
+.zona-credito-sant{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 3px solid #c70606;
+    box-shadow: 0 0 1em rgb(0 0 0 / 37%);
+    border-radius: 40px;
+    
+    padding: 18px;
+
+}
+
+.zona-credito-cred{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 0 1em rgb(0 0 0 / 37%);
+    border: 3px solid #06550d;
+    border-radius: 40px;
+
+    padding: 18px;
+
+}
+
+.zona-credito-banc{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 0 1em rgb(0 0 0 / 37%);
+    border: 3px solid #003aa8;
+    border-radius: 40px;
+
+    padding: 18px;
+
+}
+
+.banco-image{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#BancoSantinho{
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+}
+
+#BancoSantinho img{
+    width: 160px;
+    height: auto;
+}
+
+#CreditoIndustrial{
+    grid-column: 5 / 8;
+    grid-row: 1 / 1;
+}
+
+#CreditoIndustrial img{
+    width: 128px;
+    height: auto;
+}
+
+#Bancalhau{
+    grid-column: 3 / 6;
+    grid-row: 3 / 4;
+}
+
+#Bancalhau img{
+    width: 96px;
+    height: auto;
+}
+
+.credito-info{
+    display: flex;
+    flex-flow: column;
+    padding: 10px 50px 10px 0;
+}
+
+.credito-info * *{
+    font-weight: 400;
+    margin: 0;
+}
+
+/*Footer*/
 .redes_sociais{
     display: flex;
     flex-direction: row;
@@ -1302,6 +1679,7 @@ input[type="range"]::-ms-fill-upper {
     width: 16px;
 }
 
+
 #footer{
     margin-top: 48px;
     border-top: lightgray solid 1px;
@@ -1319,6 +1697,9 @@ input[type="range"]::-ms-fill-upper {
 .footer_menu ul{
     list-style-type: none;
 }
+.footer_menu li{
+    padding-bottom: 18px;
+}
 
 .column {
     color: #4c555f;
@@ -1326,10 +1707,11 @@ input[type="range"]::-ms-fill-upper {
     width: 25%;
 }
 
+
 .columnTexto {
     margin-left: 6%;
     font-size: .8125rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #4c555f;
     float: left;
     width: 17%;
@@ -1358,9 +1740,15 @@ input[type="range"]::-ms-fill-upper {
     float: left;
 }
 
+
 /*Quando o ecra é pequeno de mais, a lista dos itens fica a cubrir o compirmentro todo da página*/
 @media screen and (max-width: 991px) {
-    .home-componet{padding: 0px; width: auto;}
+    .home-componet{padding: 0; width: auto;}
+    #finaça-search{padding: 0; width: auto;}
+    .blue-container{margin-top: -6px;}
+    .red-container{margin-top: -6px;}
+    .image-content img{ padding-top: 50px; padding-bottom: 50px; }
+    .image-content .buttons{ bottom: 75px; }
 }
 
 /*O texto "Ver tudo" muda para de posiçao quando o ecra é pequeno*/
