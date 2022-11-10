@@ -4,7 +4,7 @@ Feito por: Guilherme Camacho e João Salgado
 
 Tema: Remax
 
-NOta: 95€
+Nota: 95€
 
 Cenas em falta:
  → SASS
