@@ -4,6 +4,11 @@ Feito por: Guilherme Camacho e João Salgado
 
 Tema: Remax
 
+NOta: 95€
+
+Cenas em falta:
+ → SASS
+
 ![image](https://doit.pt/wp-content/uploads/2020/03/remax-1-1024x577.jpg)
 
 @ISEC
