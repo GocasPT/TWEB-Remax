@@ -1,5 +1,5 @@
 # TWEB - Remax
-ISEC - Trabalho de PA [21/22] 
+ISEC - Trabalho de TWEB [21/22] 
 
 Feito por: Guilherme Camacho e João Salgado
 
