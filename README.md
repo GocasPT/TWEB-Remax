@@ -1,13 +1,13 @@
 # TWEB - Remax
 ISEC - Trabalho de TWEB [21/22] 
 
-Feito por: Guilherme Camacho e João Salgado
-
-Tema: Remax
+Feito por:
+- Guilherme Camacho
+- João Salgado
 
 Nota: 95%
 
+Tema: Remax
+
 Cenas em falta:
  → SASS
-
-![image](https://doit.pt/wp-content/uploads/2020/03/remax-1-1024x577.jpg)
